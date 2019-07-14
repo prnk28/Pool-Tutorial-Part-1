@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pool_app/views/profile_view.dart';
 
 const Color textColor = Color.fromRGBO(0, 79, 255, 1);
 
@@ -56,8 +57,14 @@ class PoolBar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: RawMaterialButton(
-              constraints: BoxConstraints(minWidth: 40, maxWidth: 40, maxHeight: 40, minHeight: 40),
-                onPressed: showProfile,
+                constraints: BoxConstraints(
+                    minWidth: 40, maxWidth: 40, maxHeight: 40, minHeight: 40),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfileView()),
+                  );
+                },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pool_app/views/pool_grid_cell.dart';
 import 'package:pool_app/views/pool_table_cell.dart';
 
 import 'minimal_pool_cell.dart';
@@ -13,12 +14,15 @@ const Color strongTextColor = Color.fromRGBO(2, 23, 87, 1);
 class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      child: Container(
-        height: 600,
-        decoration: BoxDecoration(
-          borderRadius: new BorderRadius.all(new Radius.circular(32.0)),
-        ),
+      return Scaffold(
+        appBar: AppBar(
+        title: Text("Profile"),
+      ),
+        body: Container(
+        height: 650,
+        // decoration: BoxDecoration(
+        //   borderRadius: new BorderRadius.all(new Radius.circular(32.0)),
+        // ),
         child: Column(
           children: <Widget>[
             // Top Header
@@ -65,22 +69,46 @@ class ProfileView extends StatelessWidget {
               ),
             ),
             // Upcoming List
-            Expanded(
-              child: SizedBox(
-                  height: 160.0,
-                  width: 350,
-                  child: ListView(
-                    padding: const EdgeInsets.all(8.0),
-                    children: <Widget>[
-                      MinimalPoolTableCell(),
-                      MinimalPoolTableCell(),
-                    ],
-                  ))),
-            // Past Grid
-            Container(),
+            SizedBox(
+                height: 225.0,
+                width: 350,
+                child: ListView(
+                  padding: const EdgeInsets.all(8.0),
+                  children: <Widget>[
+                    MinimalPoolTableCell(),
+                    MinimalPoolTableCell(),
+                  ],
+                )),
+            // Title for Past
+            Padding(
+              padding: EdgeInsets.only(top: 20, left: 10),
+              child: Container(
+                width: 380,
+                child: Text("Past Events",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: strongTextColor,
+                        fontSize: 20)),
+              ),
+            ),
+            // // Past Grid
+            // SizedBox(
+            //     height: 225.0,
+            //     width: 350,
+            //     child: GridView.count(
+            //       // Create a grid with 2 columns. If you change the scrollDirection to
+            //       // horizontal, this produces 2 rows.
+            //       crossAxisCount: 2,
+            //       // Generate 100 widgets that display their index in the List.
+            //       children:  <Widget>[
+            //         PoolGridCell(),
+            //         PoolGridCell(),
+            //         PoolGridCell(),
+            //       ],
+            //     )),
           ],
         ),
       ),
     );
+    }
   }
-}

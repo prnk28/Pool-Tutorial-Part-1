@@ -35,16 +35,6 @@ class PoolHeader extends StatelessWidget {
             speed: 0.9,
             offset: pi,
           )),
-          onBottom(AnimatedWave(
-            height: 220,
-            speed: 1.2,
-            offset: pi / 2,
-          )),
-          onBottom(AnimatedWave(
-            height: 280,
-            speed: 0.7,
-            offset: pi / 1.5,
-          )),
           // Banner Text
           Padding(
             padding: EdgeInsets.only(left: 35, top: 100),
