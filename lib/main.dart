@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pool_app/views/pool_bar.dart';
 import 'package:pool_app/views/pool_header.dart';
 import 'package:pool_app/views/pool_table_cell.dart';
 
@@ -63,24 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ))),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            title: Text('Business'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('School'),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-      ),
+      bottomNavigationBar: PoolBar()
     );
   }
 }

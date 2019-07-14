@@ -1,32 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
-import 'package:simple_animations/simple_animations/multi_track_tween.dart';
 
-class AnimatedBackground extends StatelessWidget {
+const Color textColor = Color.fromRGBO(0, 79, 255, 1);
+
+class PoolBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final tween = MultiTrackTween([
-      Track("color1").add(Duration(seconds: 3),
-          ColorTween(begin: Color.fromRGBO(63,21,225,1), end: Colors.lightBlue.shade900)),
-      Track("color2").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xffA83279), end: Colors.blue.shade600))
-    ]);
+    return Container(
+      height: 88,
+      child: Row(
+        children: <Widget>[
+          // Address Portion
+          Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color.fromRGBO(219, 232, 255, 1)),
+                width: 310,
+                height: 40,
+                child: Row(
+                  children: <Widget>[
+                // Location Icon
+                 Padding(
+                    padding: EdgeInsets.only(left: 10, top: 0),
+                    child: Icon(Icons.location_on, color: textColor)),
+                // Text Address Street/House
+                 Padding(
+                    padding: EdgeInsets.only(left: 4, top: 0),
+                    child: Text("22991 Weybridge Square,",
+                        style: TextStyle(
+                            color: textColor))),
+                // Text Address City/State
+                 Padding(
+                    padding: EdgeInsets.only(left: 4, top: 0),
+                    child: Text("Ashburn, VA",
+                        style: TextStyle(
+                            color: textColor, fontWeight: FontWeight.bold))),
+                  ],
+                )
+              )),
 
-    return ControlledAnimation(
-      playback: Playback.MIRROR,
-      tween: tween,
-      duration: tween.duration,
-      builder: (context, animation) {
-        return Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.only(
-                    bottomLeft:  const  Radius.circular(20.0),
-                    bottomRight: const  Radius.circular(20.0)),
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [animation["color1"], animation["color2"]])),
-        );
-      },
+          // User Profile
+          Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image(
+                image: NetworkImage("https://api.adorable.io/avatars/40/abott@adorable.png"),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
