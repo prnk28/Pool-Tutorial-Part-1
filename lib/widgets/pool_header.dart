@@ -1,9 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-
-import 'animated_background.dart';
-import 'animated_wave.dart';
+import 'package:pool_app/components/animated_background.dart';
+import 'package:pool_app/components/animated_wave.dart';
 
 class PoolHeader extends StatelessWidget {
   onBottom(Widget child) => Positioned.fill(

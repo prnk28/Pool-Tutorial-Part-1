@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pool_app/views/pool_bar.dart';
-import 'package:pool_app/views/pool_header.dart';
-import 'package:pool_app/views/pool_table_cell.dart';
 import 'package:pool_app/views/profile_view.dart';
+import 'package:pool_app/widgets/pool_bar.dart';
+import 'package:pool_app/widgets/pool_header.dart';
+import 'package:pool_app/widgets/pool_table_cell.dart';
 
 void main() => runApp(MyApp());
 
