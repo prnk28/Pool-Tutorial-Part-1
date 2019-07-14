@@ -8,10 +8,9 @@ const Color detailTextColor = Color.fromRGBO(0, 2, 89, 1);
 const Color neutralTextColor = Color.fromRGBO(123, 133, 169, 1);
 
 // Build Cell
-class PoolTableCell extends StatelessWidget {
-  final bool useBottomBar;
+class MinimalPoolTableCell extends StatelessWidget {
 
-  const PoolTableCell({Key key, this.useBottomBar}) : super(key: key);
+  const MinimalPoolTableCell({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -99,91 +98,8 @@ class PoolTableCell extends StatelessWidget {
                           ),
                         ],
                       )))),
-          Padding(
-            padding: EdgeInsets.only(top: 12, left: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                // Distance Information
-                Container(
-                  child: Row(
-                    children: <Widget>[
-                      // GPS Icon
-                      Image(
-                        width: 20,
-                        height: 20,
-                        image: AssetImage("assets/gps.png"),
-                      ),
-                      // Text Distance
-                      Padding(
-                        padding: EdgeInsets.only(left: 5),
-                        child: Text("5M ",
-                            style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: detailTextColor)),
-                      ),
-                      // Supporting Text
-                      Padding(
-                        padding: EdgeInsets.only(),
-                        child: Text("away",
-                            style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w300,
-                                color: detailTextColor)),
-                      )
-                    ],
-                  ),
-                ),
-                // Social Information
-                Container(
-                  child: Row(
-                    children: <Widget>[
-                      // Friend 1
-                      Padding(
-                        padding: EdgeInsets.only(),
-                        child: ClipRRect(
-                            borderRadius: new BorderRadius.circular(18),
-                            child: Image(
-                                image: NetworkImage(
-                                    "https://ui-avatars.com/api/?size=36"))),
-                      ),
-                      // Friend 2
-                      Padding(
-                        padding: EdgeInsets.only(left: 1),
-                        child: ClipRRect(
-                            borderRadius: new BorderRadius.circular(18),
-                            child: Image(
-                                image: NetworkImage(
-                                    "https://ui-avatars.com/api/?size=36"))),
-                      ),
-                      // Additional Count
-                      Padding(
-                          padding: EdgeInsets.only(left: 2),
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Color.fromRGBO(219, 232, 255, 1)),
-                            width: 50,
-                            height: 30,
-                            child: Padding(
-                                padding: EdgeInsets.only(left: 6, top: 6),
-                                child: Text("+325",
-                                    style: TextStyle(color: textColor, fontWeight: FontWeight.w600))),
-                          )),
-                      // Supporting Text
-                      Padding(
-                        padding: EdgeInsets.only(left: 3, right: 7),
-                        child: Text("are interested", style: TextStyle(color: neutralTextColor))
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
           Container(
-            height: 25,
+            height: 10,
           )
         ],
       ),

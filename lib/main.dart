@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pool_app/views/pool_bar.dart';
 import 'package:pool_app/views/pool_header.dart';
 import 'package:pool_app/views/pool_table_cell.dart';
+import 'package:pool_app/views/profile_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +29,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+  void _showDialog() {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return ProfileView();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ))),
         ],
       ),
-      bottomNavigationBar: PoolBar()
+      bottomNavigationBar: PoolBar(showProfile: _showDialog)
     );
   }
 }
