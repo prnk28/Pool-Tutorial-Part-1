@@ -4,7 +4,9 @@ import 'package:pool_app/widgets/pool_bar.dart';
 import 'package:pool_app/widgets/pool_header.dart';
 import 'package:pool_app/widgets/pool_table_cell.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 const Color strongTextColor = Color.fromRGBO(2, 23, 87, 1);
 
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pool',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -29,6 +31,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  ListView list;
+
   void _showDialog() {
     // flutter defined function
     showDialog(
@@ -38,6 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
         return ProfileView();
       },
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -74,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ))),
         ],
       ),
-      bottomNavigationBar: PoolBar(showProfile: _showDialog)
+      bottomNavigationBar: PoolBar()
     );
   }
 }

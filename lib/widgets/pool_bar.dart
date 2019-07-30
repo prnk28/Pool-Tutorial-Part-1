@@ -4,8 +4,7 @@ import 'package:pool_app/views/profile_view.dart';
 const Color textColor = Color.fromRGBO(0, 79, 255, 1);
 
 class PoolBar extends StatelessWidget {
-  final VoidCallback showProfile;
-  const PoolBar({Key key, this.showProfile}) : super(key: key);
+  const PoolBar({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
