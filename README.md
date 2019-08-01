@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://i.ibb.co/1Xy7427/Capture.png" alt="Capture" border="0">
+    <img src="https://i.ibb.co/1Xy7427/Capture.png"></img>
   <br>
 </div>
 # Pool: Tutorial Part 1 Source Code
