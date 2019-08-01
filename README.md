@@ -1,4 +1,4 @@
-<a href="https://ibb.co/kDb5Pc5"><img src="https://i.ibb.co/1Xy7427/Capture.png" alt="Capture" border="0"></a>
+<center><a href="https://ibb.co/kDb5Pc5"><img src="https://i.ibb.co/1Xy7427/Capture.png" alt="Capture" border="0"></a></center>
 # Pool: Tutorial Part 1 Source Code
 
 Supplementary code for Medium Article by Pradyumn Nukala.
