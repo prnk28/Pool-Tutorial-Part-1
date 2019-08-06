@@ -40,12 +40,12 @@ class PoolBar extends StatelessWidget {
                       // Text Address Street/House
                       Padding(
                           padding: EdgeInsets.only(left: 4, top: 0),
-                          child: Text("22991 Weybridge Square,",
+                          child: Text("Street Name,",
                               style: TextStyle(color: textColor))),
                       // Text Address City/State
                       Padding(
                           padding: EdgeInsets.only(left: 4, top: 0),
-                          child: Text("Ashburn, VA",
+                          child: Text("City, State",
                               style: TextStyle(
                                   color: textColor,
                                   fontWeight: FontWeight.bold))),
