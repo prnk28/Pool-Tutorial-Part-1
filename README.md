@@ -19,6 +19,3 @@ Here are a couple of links relating to this project:
 
 - [A Flutter Quickstart](https://www.freecodecamp.org/news/an-introduction-to-flutter-the-basics-9fe541fd39e2/)
 - [The App UI](https://dribbble.com/shots/6652283-Events-App)
-
-## In App Screenshots
-// Display Screenshots Here
